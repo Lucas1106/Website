@@ -19,3 +19,10 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+
+"scripts": {
+  "build": "npm install",
+  "migrate": "npx prisma migrate deploy",
+  "start": "npm run migrate && node server.js"
+}
